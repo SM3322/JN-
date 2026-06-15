@@ -1,43 +1,62 @@
 "use client";
 
-import { useState } from "react";
-
 export default function Home() {
-  const [fileName, setFileName] = useState("");
-  const [analysisType, setAnalysisType] = useState("Стручно мислење");
-
   return (
-    <main style={{ minHeight: "100vh", padding: "40px", fontFamily: "Arial", background: "#f5f5f5" }}>
-      <div style={{ maxWidth: "900px", margin: "0 auto", background: "white", padding: "32px", borderRadius: "16px" }}>
-        <h1>Бот за јавни набавки</h1>
-        <p>Прикачете документ и изберете тип на анализа.</p>
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "#f5f5f5",
+        padding: "40px",
+        fontFamily: "Arial",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1000px",
+          margin: "0 auto",
+        }}
+      >
+        <h1>Асистент за јавни набавки - РС Македонија</h1>
 
-        <label>Тип на анализа</label>
-        <select
-          value={analysisType}
-          onChange={(e) => setAnalysisType(e.target.value)}
-          style={{ display: "block", width: "100%", padding: "12px", marginTop: "8px", marginBottom: "20px" }}
+        <p>
+          Изберете модул за анализа:
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "20px",
+            marginTop: "30px",
+          }}
         >
-          <option>Стручно мислење</option>
-          <option>Проверка на техничка спецификација</option>
-          <option>Проверка на дискриминаторски услови</option>
-          <option>Препораки за корекција</option>
-        </select>
+          <button style={buttonStyle}>
+            📄 Анализа на барање
+          </button>
 
-        <label>Документ</label>
-        <input
-          type="file"
-          accept=".pdf,.docx,.txt"
-          onChange={(e) => setFileName(e.target.files?.[0]?.name || "")}
-          style={{ display: "block", marginTop: "8px", marginBottom: "20px" }}
-        />
+          <button style={buttonStyle}>
+            📋 Анализа на техничка спецификација
+          </button>
 
-        {fileName && <p>Избран документ: <b>{fileName}</b></p>}
+          <button style={buttonStyle}>
+            📑 Анализа на тендерска документација
+          </button>
 
-        <button style={{ padding: "12px 20px", borderRadius: "8px", border: "0", cursor: "pointer" }}>
-          Анализирај
-        </button>
+          <button style={buttonStyle}>
+            ⚖️ Подготовка на одговор на жалба
+          </button>
+        </div>
       </div>
     </main>
   );
 }
+
+const buttonStyle = {
+  padding: "40px",
+  fontSize: "18px",
+  borderRadius: "16px",
+  border: "none",
+  cursor: "pointer",
+  background: "white",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+};
