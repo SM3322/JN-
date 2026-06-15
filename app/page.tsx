@@ -30,9 +30,11 @@ export default function Home() {
             marginTop: "30px",
           }}
         >
-          <button style={buttonStyle}>
-            📄 Анализа на барање
-          </button>
+          <a href="/baranje" style={{ textDecoration: "none" }}>
+  <button style={buttonStyle}>
+    📄 Анализа на барање
+  </button>
+</a>
 
           <button style={buttonStyle}>
             📋 Анализа на техничка спецификација
