@@ -1,0 +1,12 @@
+:root { color-scheme: light; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f6f7fb; color: #172033; }
+.container { max-width: 1050px; margin: 0 auto; padding: 36px 20px; }
+.card { background: white; border: 1px solid #e6e8ef; border-radius: 18px; padding: 24px; box-shadow: 0 10px 30px rgba(20, 30, 60, 0.06); }
+h1 { margin: 0 0 8px; font-size: 32px; }
+p { line-height: 1.6; }
+label { display: block; font-weight: 700; margin: 18px 0 8px; }
+select, input[type="file"] { width: 100%; padding: 12px; border: 1px solid #ccd2df; border-radius: 10px; background: white; }
+button { margin-top: 18px; padding: 12px 18px; border: 0; border-radius: 10px; background: #172033; color: white; cursor: pointer; font-weight: 700; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.result { white-space: pre-wrap; background: #fbfcff; border: 1px solid #e6e8ef; border-radius: 14px; padding: 20px; margin-top: 22px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
